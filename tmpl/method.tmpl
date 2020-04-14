@@ -125,6 +125,10 @@ var self = this;
     <?js });
 } } ?>
 
+<?js if (data.response && response.length) { ?>
+    <?js= this.partial('params.tmpl', response) ?>
+<?js } ?>
+
 <?js if (data.yields && yields.length) { ?>		
 <h5>Yields:</h5>		
 <?js if (yields.length > 1) { ?><ul><?js		

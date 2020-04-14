@@ -444,12 +444,13 @@ function buildNav(members) {
         'Classes', 'Modules', 'Externals', 'Events', 'Namespaces', 'Mixins', 'Tutorials', 'Interfaces'
     ];
     var order = docdash.sectionOrder || defaultOrder;
+    var labels = docdash.sectionLabel || {};
     var sections = {
         Classes: buildMemberNav(members.classes, 'Classes', seen, linkto),
         Modules: buildMemberNav(members.modules, 'Modules', {}, linkto),
         Externals: buildMemberNav(members.externals, 'Externals', seen, linktoExternal),
         Events: buildMemberNav(members.events, 'Events', seen, linkto),
-        Namespaces: buildMemberNav(members.namespaces, 'Namespaces', seen, linkto),
+        Namespaces: buildMemberNav(members.namespaces, labels['Namespaces'] || 'Namespaces', seen, linkto),
         Mixins: buildMemberNav(members.mixins, 'Mixins', seen, linkto),
         Tutorials: buildMemberNav(members.tutorials, 'Tutorials', seenTutorials, linktoTutorial),
         Interfaces: buildMemberNav(members.interfaces, 'Interfaces', seen, linkto),

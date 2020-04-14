@@ -326,7 +326,11 @@ footer {
 }
 
 .type-signature {
-  color: #CA79CA
+  color: #CA79CA;
+}
+
+.type-signature:first-child {
+  display: none;
 }
 
 .type-signature:last-child {
@@ -339,6 +343,7 @@ footer {
 
 .signature {
     color: #fc83ff;
+    display: none;
 }
 
 .details {
